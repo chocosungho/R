@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: elementheight</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for elementheight {regbook}"><tr><td>elementheight {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+elementheight
+</h2>
+
+<h3>Description</h3>
+
+<p> 자료 <code>elementheight</code>에는 지식경계부 산하
+기술표준원에서 실시한 제5차 한국인 인체치수조사사업(2003&ndash;2004)에서
+발표한 초등학교에 해당한는 6세에서 12세까지의 나이별 키 자료가 나와있다.
+각 나이별로 250명 정도의 표본에서 구한 키의 표본평균과 표준편차가 주어져
+있는데 나이에 따라 키와 함께 표준편차도 증가하고 있음을 알 수 있다.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>elementheight</pre>
+
+
+<h3>Format</h3>
+
+<p>이 데이터프레임은 다음과 같은 열로 구성되어 있다.
+</p>
+
+<dl>
+<dt>meanheight</dt><dd><p>키의 표본평균</p>
+</dd>
+<dt>sdheight</dt><dd><p>키의 표본표준편차</p>
+</dd>
+<dt>age</dt><dd><p>나이</p>
+</dd>
+</dl>
+
+
+
+<h3>Examples</h3>
+
+<pre>
+fit &lt;- lm(meanheight ~ age, elementheight, weight=1/sdheight^2)
+anova(fit)
+summary(fit)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Plot Diagnostics for an rlm Object</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot.rlm {regbook}"><tr><td>plot.rlm {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Plot Diagnostics for an rlm Object</h2>
+
+<h3>Description</h3>
+
+<p>Plot Diagnostics for an rlm Object
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'rlm'
+plot(object, which = c(7L:8L), ask = prod(par("mfcol")) &lt;
+  length(which) &amp;&amp; dev.interactive(), label.pos = c(4, 2),
+  labels.id = names(residuals(object)), cex.id = 0.75, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p><code><a href="../../MASS/html/rlm.html">rlm</a></code> object</p>
+</td></tr>
+<tr valign="top"><td><code>which</code></td>
+<td>
+<p>a subset of the numbers <code>1:8</code></p>
+</td></tr>
+<tr valign="top"><td><code>ask</code></td>
+<td>
+<p>logical. See <code>par("ask")</code></p>
+</td></tr>
+<tr valign="top"><td><code>label.pos</code></td>
+<td>
+<p>positiong of labels. See <code>plot.lm</code></p>
+</td></tr>
+<tr valign="top"><td><code>labels.id</code></td>
+<td>
+<p>vector of labels. See <code>plot.lm</code></p>
+</td></tr>
+<tr valign="top"><td><code>cex.id</code></td>
+<td>
+<p>magnification of point labels. See <code>plot.lm</code></p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>other parameters to be passed through to <code>plot.lm</code> function</p>
+</td></tr>
+</table>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

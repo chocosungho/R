@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Fancy Histogram</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for histf {regbook}"><tr><td>histf {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Fancy Histogram</h2>
+
+<h3>Description</h3>
+
+<p>Fancy Histogram
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+histf(x, breaks = sqrt(length(x)), length.out = 100, rug = FALSE,
+  boxplot = FALSE, fill = "lightblue", main = paste("Histogram of",
+  xname), densityFunction = function(y) dnorm(y, mean(x), sd(x)),
+  densityName = "normal", xrange = extendrange(c(min(x), max(x))), ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a numeric vector</p>
+</td></tr>
+<tr valign="top"><td><code>breaks</code></td>
+<td>
+<p>see <a href="../../graphics/html/hist.html">hist</a></p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+with(subset(hweight, gender=="M"), histf(height))
+with(subset(hweight, gender=="M"), {
+   hist(height, probability=TRUE, breaks=sqrt(length(height)), col="lightblue")
+   lines(density(height))
+   xs &lt;- seq(min(height), max(height), length.out=100)
+   lines(xs, dnorm(xs))
+})
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

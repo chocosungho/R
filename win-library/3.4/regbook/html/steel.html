@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: steel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for steel {regbook}"><tr><td>steel {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+steel
+</h2>
+
+<h3>Description</h3>
+
+<p>기계장비용 강판을 생산하는 회사에서는 납품하는 강판의 가격이 그 강판을
+사용하는 기계의 가격으로부터 어떠한 영향을 받는지를 조사하기 위하여
+과거 16개월 동안의 자료를 수집하였다.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>steel</pre>
+
+
+<h3>Format</h3>
+
+<p>이 데이터프레임은 다음과 같은 열로 구성되어 있다.
+</p>
+
+<dl>
+<dt>steelprice</dt><dd><p>강판의 가격(단위: 십만원)</p>
+</dd>
+<dt>machineprice</dt><dd><p>기계의 가격(단위: 백만원)</p>
+</dd>
+</dl>
+
+
+
+<h3>Examples</h3>
+
+<pre>
+fit &lt;- lm(steelprice ~ machineprice, steel)
+
+par(mfrow=c(1,2))
+plot(steelprice ~ machineprice, steel)
+abline(fit)
+plot(resid(fit))
+abline(h=0)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

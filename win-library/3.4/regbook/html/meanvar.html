@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Mean and Variance of Data Subsets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for meanvar {regbook}"><tr><td>meanvar {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Mean and Variance of Data Subsets</h2>
+
+<h3>Description</h3>
+
+<p>Splits the data into subsets according to the X levels, compute mean and
+variance of the response for each.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+meanvar(formula, data, ..., na.action = na.omit)
+
+## S3 method for class 'meanvar'
+as.data.frame(obj, ...)
+
+## S3 method for class 'meanvar'
+print(obj, ...)
+
+## S3 method for class 'meanvar'
+plot(obj, formula, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>formula</code></td>
+<td>
+<p>a formula, such as <code>y ~ x</code>, where the <code>y</code> variable are numeric data to be split into groups according to the grouping <code>x</code> variables.</p>
+</td></tr>
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>a data frame</p>
+</td></tr>
+<tr valign="top"><td><code>obj</code></td>
+<td>
+<p>an <code>meanvar</code> object</p>
+</td></tr>
+<tr valign="top"><td><code>formula</code></td>
+<td>
+<p>mean-vairance relationship, for example, <code>sd ~ mean</code>, <code>sd ~ mean + I(mean^2)</code>, <code>var ~ mean</code>, etc.</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+meanvar(Y ~ X, restaurant)
+plot(meanvar(Y ~ X, restaurant), sd ~ mean + I(mean^2))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

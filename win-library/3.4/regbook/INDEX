@@ -1,0 +1,63 @@
+KBO1                    KBO1
+MLB1                    MLB1
+adsale                  adsale
+aflength                aflength
+blood2001m              blood2001m
+bloodpressure           bloodpressure
+bod                     bod
+bodyfat                 bodyfat
+bookprice               bookprice
+boxcox2                 boxcox2
+bug                     bug
+carsale                 carsale
+catalyst                catalyst
+chemical                chemical
+coef.pcr                Extract Model Coefficients
+cygnus                  cygnus
+dbvnorm                 The Bivariate Normal Distribution
+elementheight           elementheight
+english1                english1
+english2                english2
+enzyme                  enzyme
+examscore               examscore
+expdata1                expdata1
+expdata2                expdata2
+factorial               factorial
+fitplot                 Fitted Objectel Plot for Simple Linear
+                        Regression
+galton                  galton
+gdpgrowth               gdpgrowth
+growth1                 growth1
+growth2                 growth2
+hald                    hald
+histf                   Fancy Histogram
+houseprice              houseprice
+hweight                 hweight
+infludata               infludata
+lmbeta                  Add Standardized Coefficients
+mammal                  mammal
+meanvar                 Mean and Variance of Data Subsets
+normaldensity           normaldensity
+pcr                     Principal Component Regression
+pcr.fit                 Fitting Principal Component Regression Model
+plot.rlm                Plot Diagnostics for an rlm Object
+press                   Predicted Residual Sum of Squares
+press.regsubsets        Compute Predicted Residual Sum of Squares
+quadratic               quadratic
+restaurant              restaurant
+rpredict                Predicted Residuals
+rsadata1                rsadata1
+stdcoef                 Extract Standardized Coefficients
+steel                   steel
+summaryf                Fancy Summary
+summaryf.regsubsets     Alternative summary for regsubsets object
+suneung                 suneung
+tree                    tree
+usedcars                usedcars
+vif                     Variance Inflation Factor and Collinearity
+                        Diagnostics
+waist                   waist
+waldint                 Wald confidence interval
+wool                    wool
+wrapper                 wrapper
+yield                   yield

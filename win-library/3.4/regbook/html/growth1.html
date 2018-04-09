@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: growth1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for growth1 {regbook}"><tr><td>growth1 {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+growth1
+</h2>
+
+<h3>Description</h3>
+
+<p>자료 <code>growth1</code>는 어느 식물의 성장 속도에 관한 실험 결과이다. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>growth1</pre>
+
+
+<h3>Format</h3>
+
+<p>이 데이터프레임은 다음과 같은 열로 구성되어 있다.
+</p>
+
+<dl>
+<dt>y</dt><dd><p>성장치</p>
+</dd>
+<dt>x</dt><dd><p>시간</p>
+</dd>
+</dl>
+
+
+
+<h3>Examples</h3>
+
+<pre>
+fit &lt;- nls(y ~ beta1 * x/ (beta2 + x), data=growth1, start=list(beta1=22, beta2=9), trace=TRUE)
+summary(fit)
+
+plot(y ~ x, growth1)
+lines(fitted(fit) ~ x, growth1)
+
+plot(resid(fit) ~ fitted(fit))
+abline(h=0)
+
+plot(resid(fit) ~ x, growth1)
+abline(h=0)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

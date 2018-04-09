@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: aflength</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for aflength {regbook}"><tr><td>aflength {regbook}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>aflength</h2>
+
+<h3>Description</h3>
+
+<p> 의학적으로 정확하지는 않지만 인체의 특성 중에는 양팔을
+벌린 길이는 키와 같다든지, 목둘레는 허리둘레 또는 팔목굵기와 관계가
+있다든지 하는 흥미로운 사실들이 많이 있다. 자료 <code>aflength</code>는
+S대학교 학생들 중 무작위로 남녀 각각 16명을 추출하여 조사한 자료로
+발길이와 팔안쪽길이이다. </p>
+
+
+<h3>Usage</h3>
+
+<pre>aflength</pre>
+
+
+<h3>Format</h3>
+
+<p>이 데이터프레임은 다음과 같은 열로 구성되어 있다.
+</p>
+
+<dl>
+<dt>foot</dt><dd><p>발길이(mm). 양말을 벗은 상태로 측정하였고 오른쪽 발만 측정하였다.</p>
+</dd>
+<dt>forearm</dt><dd><p>팔안쪽길이(mm). 손목부터 팔꿈치가 접히는 부분까지의
+길이이다. 오른쪽 팔만 측정하였다.</p>
+</dd>
+<dt>gender</dt><dd><p>성별. 남성(M), 여성(F).</p>
+</dd>
+</dl>
+
+
+
+<h3>Examples</h3>
+
+<pre>
+  plot(foot ~ forearm, aflength)
+  aflength.lm &lt;- lm(foot ~ forearm, aflength)
+  abline(aflength.lm)
+  with(aflength, lines(lowess(forearm, foot), col="red"))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>regbook</em> version 0.9.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
